@@ -82,14 +82,14 @@ Mapreduce hoạt động dựa vào nguyên tắc chính là “Chia để trị
 - Phân chia các dữ liệu cần xử lý thành nhiều phần nhỏ trước khi thực hiện. 
 - Xử lý các vấn đề nhỏ theo phương thức song song trên các máy tính rồi phân tán hoạt động theo hướng độc lập.
 Tiến hành tổng hợp những kết quả thu được để đề ra được kết quả sau cùng. 
-<a name="5.-cac-buoc-hoat-dong">/a>
+<a name="5.-cac-buoc-hoat-dong"></a>
 ### 5. Các bước hoạt động của MapReduce
 - Bước 1: Tiến hành chuẩn bị các dữ liệu đầu vào để cho Map() có thể xử lý.
 - Bước 2: Lập trình viên thực thi các mã Map() để xử  lý. 
 - Bước 3: Tiến hành trộn lẫn các dữ liệu được xuất ra bởi Map() vào trong Reduce Processor
 - Bước 4: Tiến hành thực thi tiếp mã Reduce() để có thể xử lý tiếp các dữ liệu cần thiết.  
 - Bước 5: Thực hiện tạo các dữ liệu xuất ra cuối cùng. 
-<a name="6.-luong-du-lieu">/a>
+<a name="6.-luong-du-lieu"></a>
 ### 6. Luồng dữ liệu nền tảng của Mapreduce
 - Input Reader
 - Map Function
@@ -97,7 +97,7 @@ Tiến hành tổng hợp những kết quả thu được để đề ra đư�
 - Compare Function
 - Reduce Function
 - Output Writer
-<a name="7.-ung-dung">/a>
+<a name="7.-ung-dung"></a>
 ### 7.Ứng dụng của Mapreduce
 MapReduce được ứng dụng cho việc thống kê hàng loạt những số liệu cụ thể như sau: 
 - Thực hiện thống kê cho các từ khóa được xuất hiện ở trong các tài liệu, bài viết, văn bản hoặc được cập nhật trên hệ thống fanpage, website,…
