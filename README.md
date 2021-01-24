@@ -17,3 +17,12 @@ Trình bày tổng quan về Apache Spark và Mapreduce
   
   Spark Streaming cung cấp API để dễ dàng xử lý dữ liệu stream
 MLlib Cung cấp rất nhiều thuật toán của học máy như: classification, regression, clustering, collaborative filtering… Còn GraphX là thư viện để xử lý đồ thị.
+## 3. Những tính năng nổi bật
+- “Spark as a Service”: Giao diện REST để quản lí (submit, start, stop, xem trạng thái) spark job, spark context
+- Tăng tốc, giảm độ trễ thực thi job xuống mức chỉ tính bằng giây bằng cách tạo sẵn spark context cho các job dùng chung.
+- Stop job đang chạy bằng cách stop spark context
+- Bỏ bước upload gói jar lúc start job làm cho job được start nhanh hơn.
+- Cung cấp hai cơ chế chạy job đồng bộ và bất đồng bộ
+- Cho phép cache RDD theo tên , tăng tính chia sẻ và sử dụng lại RDD giữa các job
+- Hỗ trợ viết spark job bằng cú pháp SQL
+- Dễ dàng tích hợp với các công cụ báo cáo như: Business Intelligence, Analytics, Data Integration Tools
