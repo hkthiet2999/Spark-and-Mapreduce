@@ -5,12 +5,14 @@
   - [ 2. Các thành phần của Apache Spark](#2.-cac-thanh-phan-cua-apache-spark)
   - [ 3. Những tính năng nổi bật](#3.-nhung-tinh-nang-noi-bat)
   - [ 4. Quản lý bộ nhớ của Apache Spark](#4.-quan-ly-bo-nho-cua-apache-spark)
+<a name="I.-tong-quan-ve-apache-spark"></a>
 ## I. Tổng quan về Apache Spark
+<a name="1.-gioi-thieu"></a>
 ### 1. Giới thiệu
   Apache Spark là một open source cluster computing framework được phát triển vào năm 2009 bởi AMPLab tại đại học California. Sau này, Spark đã được truyền lại cho Apache Software Foundation vào năm 2013 và được phát triển cho đến nay.
 
   Apache Spark  cho phép xây dựng các predition model ( mô hình dự đoán) nhanh chóng với việc tính toán được thực hiện trên một nhóm các máy tính, nó có thể tính toán cùng lúc trên toàn bộ tập dữ liệu mà không cần phải trích xuất mẫu tính toán thử nghiệm. Tốc độ xử lý của Spark dựa trên việc tính toán được thực hiện cùng lúc trên nhiều máy khác nhau. Đồng thời việc tính toán được thực hiện ở bộ nhớ trong (in-memories) hay thực hiện hoàn toàn trên RAM.
- 
+ <a name="2.-cac-thanh-phan-cua-apache-spark"></a>
  ### 2. Các thành phần của Apache Spark
   Matei Zaharia là cha đẻ của Spark, ông này sử dụng Hadoop từ những ngày đầu phát triển spark. Đến năm 2009 ông viết Apache Spark để giải quyết những bài toán học máy ở đại học UC Berkely vì Hadoop MapReduce hoạt động không hiệu quả cho những bài toán này. Sau đó ông nhận ra rằng Spark không chỉ hữu ích cho học máy mà còn cho cả việc xử lý luồng dữ liệu hoàn chỉnh.
   
@@ -22,6 +24,7 @@
   
   Spark Streaming cung cấp API để dễ dàng xử lý dữ liệu stream
 MLlib Cung cấp rất nhiều thuật toán của học máy như: classification, regression, clustering, collaborative filtering… Còn GraphX là thư viện để xử lý đồ thị.
+<a name="3.-nhung-tinh-nang-noi-bat"></a>
 ### 3. Những tính năng nổi bật
 - “Spark as a Service”: Giao diện REST để quản lí (submit, start, stop, xem trạng thái) spark job, spark context
 - Tăng tốc, giảm độ trễ thực thi job xuống mức chỉ tính bằng giây bằng cách tạo sẵn spark context cho các job dùng chung.
@@ -31,6 +34,7 @@ MLlib Cung cấp rất nhiều thuật toán của học máy như: classificati
 - Cho phép cache RDD theo tên , tăng tính chia sẻ và sử dụng lại RDD giữa các job
 - Hỗ trợ viết spark job bằng cú pháp SQL
 - Dễ dàng tích hợp với các công cụ báo cáo như: Business Intelligence, Analytics, Data Integration Tools
+<a name="4.-quan-ly-bo-nho-cua-apache-spark"></a>
 ### 4. Quản lý bộ nhớ của Apache Spark
   Spark giải quyết các vấn đề vấn đề xung quanh định nghĩa Resilient Distributed Datasets (RDDs). RDDs hỗ trợ hai kiểu thao tác thao tác: transformations và action. Thao tác chuyển đổi(tranformation) tạo ra dataset từ dữ liệu có sẵn. Thao tác actions trả về giá trị cho chương trình điều khiển (driver program) sau khi thực hiện tính toán trên dataset.
 
