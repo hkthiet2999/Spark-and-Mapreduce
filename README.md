@@ -1,5 +1,4 @@
-# Spark-and-Mapreduce
-Trình bày tổng quan về Apache Spark và Mapreduce
+# Trình bày tổng quan về Apache Spark và Mapreduce
 ## I. Tổng quan về Apache Spark
 ### 1. Giới thiệu
   Apache Spark là một open source cluster computing framework được phát triển vào năm 2009 bởi AMPLab tại đại học California. Sau này, Spark đã được truyền lại cho Apache Software Foundation vào năm 2013 và được phát triển cho đến nay.
@@ -33,9 +32,8 @@ MLlib Cung cấp rất nhiều thuật toán của học máy như: classificati
   
   Mỗi Worker bao gồm một hoặc nhiều Excuter. Các excuter chịu trách nhiệm thực hiện các task trên các luồng riêng biệt. Việc chia nhỏ các task giúp đem lại hiệu năng cao hơn, giảm thiểu ảnh hưởng của dữ liệu không đối xứng (kích thước các file không đồng đều).
 Quá trình Spark xây dựng DAG: Có hai kiểu chuyển đổi có thể áp dụng trên các RDDs đó là chuyển đổi hẹp và chuyển đổi rộng:
-
-  – Chuyển đổi hẹp: không yêu cầu xáo trộn dữ liệu vượt qua các phân vùng (partition).Ví dụ như các thao tác map, filter,..
-  – Chuyển đổi rộng yêu cầu dữ liệu phải xáo trộn. Ví dụ: reduceByKey, sortByKey, groupByKey,…
+– Chuyển đổi hẹp: không yêu cầu xáo trộn dữ liệu vượt qua các phân vùng (partition).Ví dụ như các thao tác map, filter,..
+– Chuyển đổi rộng yêu cầu dữ liệu phải xáo trộn. Ví dụ: reduceByKey, sortByKey, groupByKey,…
   
   Spark truy cập dữ liệu được lưu trữ ở các nguồn khác nhau như: HDFS, Local Disk, RAM. Cache Manager sử dụng Block Manager để quản lý dữ liệu. Cache Manager quản lý dữ liệu nào được Cache trên RAM, thông thường là dữ liệu được sử dụng thường xuyên nhất, nó cũng có thể được xác định thủ công bằng tay sử dụng phương thức persit hoặc cache. Nếu kích thước RAM không đủ chứa dữ liệu thì dữ liệu sẽ được lưu trữ sang Tachyon và cuối cùng là lưu trữ lên đĩa. Khi dữ liệu(RDD) không được lưu trữ trên RAM, khi có nhu cầu sử dụng đến, chúng sẽ được recompute lại. Nó sử dụng một khái niệm là “storage level” để quản lý cấp độ của lưu trữ của dữ liệu.
 
@@ -62,4 +60,24 @@ Mapreduce hoạt động dựa vào nguyên tắc chính là “Chia để trị
 - Phân chia các dữ liệu cần xử lý thành nhiều phần nhỏ trước khi thực hiện. 
 - Xử lý các vấn đề nhỏ theo phương thức song song trên các máy tính rồi phân tán hoạt động theo hướng độc lập.
 Tiến hành tổng hợp những kết quả thu được để đề ra được kết quả sau cùng. 
-
+### 5. Các bước hoạt động của MapReduce
+- Bước 1: Tiến hành chuẩn bị các dữ liệu đầu vào để cho Map() có thể xử lý.
+- Bước 2: Lập trình viên thực thi các mã Map() để xử  lý. 
+- Bước 3: Tiến hành trộn lẫn các dữ liệu được xuất ra bởi Map() vào trong Reduce Processor
+- Bước 4: Tiến hành thực thi tiếp mã Reduce() để có thể xử lý tiếp các dữ liệu cần thiết.  
+- Bước 5: Thực hiện tạo các dữ liệu xuất ra cuối cùng. 
+### 6. Luồng dữ liệu nền tảng của Mapreduce
+- Input Reader
+- Map Function
+- Partition Function
+- Compare Function
+- Reduce Function
+- Output Writer
+### 7.Ứng dụng của Mapreduce
+MapReduce được ứng dụng cho việc thống kê hàng loạt những số liệu cụ thể như sau: 
+- Thực hiện thống kê cho các từ khóa được xuất hiện ở trong các tài liệu, bài viết, văn bản hoặc được cập nhật trên hệ thống fanpage, website,…
+- Khi số lượng các bài viết đã được thống kê thì tài liệu sẽ có chứa các từ khóa đó. 
+- Thống kê được những câu lệnh match, pattern bên trong các tài liệu đó
+- Khi thống kê được số lượng các URLs có xuất hiện bên trong một webpages. 
+- Thống kê được các lượt truy cập của khách hàng sao cho nó có thể tương ứng với các URLs.
+- Thống kê được tất cả từ khóa có trên website, hostname,…
