@@ -133,8 +133,13 @@ Giữa hàm Map và Reduce có một giai đoạn xử lý trung gian gọi là 
 
 File homework01.ipynb trong repo này là file minh họa cho bài toán WordCount trên, sử dụng file input.txt làm file văn bản và đếm số lượng các từ trong file đó. Output của chương trình là 20 từ đầu tiên có số lượng cao nhất, sắp xếp theo thứ tự từ trên xuống như sau: 
 
+![](output.png)
+
 <a name="refer"></a>
 ### Tham khảo
 https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 
 https://viblo.asia/p/tim-hieu-ve-hadoop-bJzKmOBXl9N
+
+https://sparkbyexamples.com/apache-spark-rdd/spark-reducebykey-usage-with-examples/
+https://github.com/gogundur/Pyspark-WordCount/blob/master/PySpark%20WordCount%20v2.ipynb
