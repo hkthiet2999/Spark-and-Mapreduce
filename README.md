@@ -13,6 +13,7 @@
   - [ 5. Các bước hoạt động của MapReduce](#5.-cac-buoc-hoat-dong)
   - [ 6. Luồng dữ liệu nền tảng của Mapreduce](#6.-luong-du-lieu)
   - [ 7. Ứng dụng của Mapreduce](#7.-ung-dung)
+- [Tham khảo](#refer)
 <a name="I.-tong-quan-ve-apache-spark"></a>
 ## I. Tổng quan về Apache Spark
 <a name="1.-gioi-thieu"></a>
@@ -106,6 +107,8 @@ MapReduce được ứng dụng cho việc thống kê hàng loạt những số
 - Khi thống kê được số lượng các URLs có xuất hiện bên trong một webpages. 
 - Thống kê được các lượt truy cập của khách hàng sao cho nó có thể tương ứng với các URLs.
 - Thống kê được tất cả từ khóa có trên website, hostname,…
+<a name="refer"></a>
 ### Tham khảo
 https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
+
 https://viblo.asia/p/tim-hieu-ve-hadoop-bJzKmOBXl9N
