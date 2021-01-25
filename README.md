@@ -13,6 +13,7 @@
   - [ 5. Các bước hoạt động của MapReduce](#5.-cac-buoc-hoat-dong)
   - [ 6. Luồng dữ liệu nền tảng của Mapreduce](#6.-luong-du-lieu)
   - [ 7. Ứng dụng của Mapreduce](#7.-ung-dung)
+- [Ví dụ minh họa](#vd)
 - [Tham khảo](#refer)
 <a name="I.-tong-quan-ve-apache-spark"></a>
 ## I. Tổng quan về Apache Spark
@@ -110,7 +111,7 @@ MapReduce được ứng dụng cho việc thống kê hàng loạt những số
 - Khi thống kê được số lượng các URLs có xuất hiện bên trong một webpages. 
 - Thống kê được các lượt truy cập của khách hàng sao cho nó có thể tương ứng với các URLs.
 - Thống kê được tất cả từ khóa có trên website, hostname,…
-<a name="refer"></a>
+<a name="vd"></a>
 ## Ví dụ minh họa
  
 WordCount là bài toán đếm tần suất xuất hiện của các từ trong đoạn văn bản. Quá trình xử lý bài toán này bằng Map-Redue như sau:
@@ -130,8 +131,9 @@ Hàm Reduce cũng được chạy song song để xử lý các tập từ khoá
 
 Giữa hàm Map và Reduce có một giai đoạn xử lý trung gian gọi là hàm Shuffle. Hàm này có nhiệm vụ sắp xếp các từ và tổng hợp dữ liệu đầu vào cho Reduce từ các kết quả đầu ra của hàm Map.
 
+File homework01.ipynb trong repo này là file minh họa cho bài toán WordCount trên, sử dụng file input.txt làm file văn bản và đếm số lượng các từ trong file đó. Output của chương trình là 20 từ đầu tiên có số lượng cao nhất, sắp xếp theo thứ tự từ trên xuống như sau: 
 
-
+<a name="refer"></a>
 ### Tham khảo
 https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 
