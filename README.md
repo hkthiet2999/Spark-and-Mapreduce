@@ -106,3 +106,6 @@ MapReduce được ứng dụng cho việc thống kê hàng loạt những số
 - Khi thống kê được số lượng các URLs có xuất hiện bên trong một webpages. 
 - Thống kê được các lượt truy cập của khách hàng sao cho nó có thể tương ứng với các URLs.
 - Thống kê được tất cả từ khóa có trên website, hostname,…
+### Tham khảo
+https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
+https://viblo.asia/p/tim-hieu-ve-hadoop-bJzKmOBXl9N
