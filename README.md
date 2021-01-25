@@ -115,6 +115,23 @@ MapReduce được ứng dụng cho việc thống kê hàng loạt những số
  
 WordCount là bài toán đếm tần suất xuất hiện của các từ trong đoạn văn bản. Quá trình xử lý bài toán này bằng Map-Redue như sau:
 
+![](wc.jpg)
+
+Đối với hàm Map:
+  - Input là 1 đoạn văn bản
+  - Output là các cặp <word, 1>
+Hàm Map được thực hiện song song để xử lý các tập dữ liệu khác nhau.
+
+Đối Với hàm Reduce:
+
+  - Input có dạng <word, [list]>, trong đó list là tập hợp các giá trị đếm được của mỗi từ
+  - Output: <word, tổng số lần xuất hiện của từ>
+Hàm Reduce cũng được chạy song song để xử lý các tập từ khoá khác nhau.
+
+Giữa hàm Map và Reduce có một giai đoạn xử lý trung gian gọi là hàm Shuffle. Hàm này có nhiệm vụ sắp xếp các từ và tổng hợp dữ liệu đầu vào cho Reduce từ các kết quả đầu ra của hàm Map.
+
+
+
 ### Tham khảo
 https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 
