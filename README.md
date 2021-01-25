@@ -142,4 +142,5 @@ https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 https://viblo.asia/p/tim-hieu-ve-hadoop-bJzKmOBXl9N
 
 https://sparkbyexamples.com/apache-spark-rdd/spark-reducebykey-usage-with-examples/
+
 https://github.com/gogundur/Pyspark-WordCount/blob/master/PySpark%20WordCount%20v2.ipynb
