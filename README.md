@@ -111,6 +111,10 @@ MapReduce được ứng dụng cho việc thống kê hàng loạt những số
 - Thống kê được các lượt truy cập của khách hàng sao cho nó có thể tương ứng với các URLs.
 - Thống kê được tất cả từ khóa có trên website, hostname,…
 <a name="refer"></a>
+## Ví dụ minh họa
+ 
+WordCount là bài toán đếm tần suất xuất hiện của các từ trong đoạn văn bản. Quá trình xử lý bài toán này bằng Map-Redue như sau:
+
 ### Tham khảo
 https://viblo.asia/p/tong-quan-ve-apache-spark-cho-he-thong-big-data-RQqKLxR6K7z
 
